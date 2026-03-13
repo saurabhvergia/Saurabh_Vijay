@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dr. Saurabh Vijay - Glaciology Research Group | IIT Roorkee</title>
+<!-- SEO Meta Tags -->
+<meta content="Dr. Saurabh Vijay's research group at IIT Roorkee - Glacier dynamics, remote sensing, and cryosphere science in High-Mountain Asia" name="description"/>
+<meta content="glaciology, remote sensing, IIT Roorkee, High-Mountain Asia, SAR, glacier dynamics" name="keywords"/>
+<meta content="Dr. Saurabh Vijay" name="author"/>
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Dr. Saurabh Vijay - Glaciology Research">
+<meta property="og:description" content="Glacier dynamics and remote sensing research at IIT Roorkee">
+<meta property="og:type" content="website">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.carousel-btn:focus,
+button:focus {
+    outline: 2px solid rgb(37, 99, 235);
+    outline-offset: 2px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    background-color: rgb(37, 99, 235);
+    color: white;
+    border-radius: 9999px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgb(29, 78, 216);
+}
+
+.carousel-btn.left {
+    left: 0.5rem;
+}
+
+.carousel-btn.right {
+    right: 0.5rem;
+}
+
+.carousel-btn.masters {
+    background-color: rgb(8, 145, 178);
+}
+
+.carousel-btn.masters:hover {
+    background-color: rgb(14, 116, 144);
+}
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.project-toggle-btn {
+    outline: none;
+}
+
+.project-details {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.field-visit-card {
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.field-visit-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.15), 0 4px 6px -2px rgba(30, 64, 175, 0.08);
+    transform: translateY(-2px);
+}
+.field-visit-toggle-btn {
+    outline: none;
+}
+.field-visit-details {
+    transition: max-height 0.3s, opacity 0.3s;
+    overflow: hidden;
+}
+
+.publication-card {
+    transition: box-shadow 0.3s ease;
+}
+
+.publication-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.year-filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.year-filter-btn.active {
+    background-color: rgb(37, 99, 235);
+    color: white;
+}
+
+.year-filter-btn:not(.active) {
+    background-color: rgb(229, 231, 235);
+    color: rgb(55, 65, 81);
+}
+
+.year-filter-btn:not(.active):hover {
+    background-color: rgb(209, 213, 219);
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.expandable-content.expanded {
+    max-height: 2000px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.student-image {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+    .student-image {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+.student-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.student-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.student-card-horizontal {
+    width: 100%;
+}
+
+.student-card-header-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .student-card-header-horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.student-card-image-horizontal {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.student-card-info-horizontal {
+    flex: 1;
+    min-width: 0;
+}
+
+.student-card-header {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.student-card-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.student-card-name {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: rgb(17, 24, 39);
+    margin-bottom: 0.5rem;
+}
+
+.student-card-topic {
+    font-size: 0.875rem;
+    color: rgb(55, 65, 81);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.student-card-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(219, 234, 254);
+    color: rgb(37, 99, 235);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+.student-card-toggle:hover {
+    background-color: rgb(191, 219, 254);
+}
+
+.student-card-toggle.masters {
+    background-color: rgb(207, 250, 254);
+    color: rgb(8, 145, 178);
+}
+
+.student-card-toggle.masters:hover {
+    background-color: rgb(165, 243, 252);
+}
+
+.student-card-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.student-card-details.expanded {
+    max-height: 2000px;
+}
+
+.student-card-content {
+    padding: 1.5rem;
+    border-top: 1px solid rgb(229, 231, 235);
+    font-size: 0.875rem;
+    color: rgb(55, 65, 81);
+    line-height: 1.6;
+}
+
+.engagement-item {
+    border-left: 4px solid;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.engagement-item.membership {
+    border-left-color: rgb(96, 165, 250);
+}
+
+.engagement-item.committee {
+    border-left-color: rgb(34, 211, 238);
+}
+
+.engagement-item.outreach {
+    border-left-color: rgb(74, 222, 128);
+}
+
+.engagement-item.conference {
+    border-left-color: rgb(192, 132, 252);
+}
+
+#easter-egg {
+    display: inline-block;
+}
+
+#easter-egg:active {
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background-image: url('assets/images/glacier-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 1rem;
+    min-height: 60vh;
+    transition: padding 0.1s ease-out, min-height 0.1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.65) 0%, rgba(37, 99, 235, 0.65) 100%);
+    opacity: 1;
+}
+
+.hero-banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 6xl;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-frame {
+    aspect-ratio: 3/4;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        padding: 0.375rem;
+    }
+    
+    .carousel-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    h2 {
+        font-size: 1.875rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Sticky Index Navigation */
+.sticky-index-nav {
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.index-nav-link {
+    position: relative;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.index-nav-link.active {
+    color: rgb(37, 99, 235);
+    border-bottom-color: rgb(37, 99, 235);
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+</style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+
+<!-- Hero Section -->
+<section id="home" class="pt-0">
+<!-- Banner with Professor Name -->
+<div class="hero-banner">
+<div class="hero-banner-content">
+<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center">Dr. Saurabh Vijay</h1>
+<p class="text-lg text-blue-100 text-center mt-2">Glaciology Research Group | IIT Roorkee</p>
+</div>
+</div>
+
+<!-- Sticky Index Navigation Bar -->
+<nav class="sticky-index-nav bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-40" id="index-nav">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-center items-center h-14 overflow-x-auto scrollbar-hide">
+<button class="index-nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap border-b-2 border-transparent hover:border-blue-600 active" data-section="home">Home</button>
+<button class="index-nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap border-b-2 border-transparent hover:border-blue-600" data-section="projects">Projects</button>
+<button class="index-nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap border-b-2 border-transparent hover:border-blue-600" data-section="students">Students</button>
+<button class="index-nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap border-b-2 border-transparent hover:border-blue-600" data-section="publications">Publications</button>
+<button class="index-nav-link px-4 py-2 text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors whitespace-nowrap border-b-2 border-transparent hover:border-blue-600" data-section="engagement">Engagement</button>
+</div>
+</div>
+</nav>
+
+<!-- Content Section with Profile Photo and Info -->
+<div class="pb-20 px-4">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col items-center mt-12">
+<!-- Profile Photo -->
+<div class="w-full max-w-sm">
+<div class="profile-frame">
+<img alt="Dr. Saurabh Vijay" loading="lazy" src="assets/images/Saurabh_Vijay.jpg"/>
+</div>
+</div>
+
+<!-- Content -->
+<div class="space-y-6 text-center mt-8 max-w-2xl">
+<div>
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">Monitoring Glaciers and Snow in High-Mountain Asia</h2>
+<p class="text-lg font-semibold text-blue-600">Assistant Professor | Geomatics Engineering | IIT Roorkee</p>
+</div>
+
+<p class="text-gray-700 leading-relaxed">
+Specializing in glacier dynamics, remote sensing, and cryosphere science with focus on High-Mountain Asia. 
+Using radar DEMs, SAR interferometry, and optical remote sensing to understand glacier elevation changes, 
+mass balance, and the role of supraglacial features in glacier response to climate change.
+</p>
+
+<div>
+<h3 class="font-bold text-gray-900 mb-2">Education</h3>
+<p class="text-gray-700">B.E. in Electronics and Communications Engineering (University of Rajasthan, 2008)</p>
+<p class="text-gray-700">M.Tech in Geomatics Engineering (IIT Roorkee, 2012)</p>
+</div>
+
+<div class="flex flex-wrap gap-4 pt-4 justify-center">
+<a class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" href="mailto:saurabh.vijay@ce.iitr.ac.in">
+<i data-lucide="mail"></i>
+<span class="hidden sm:inline">Email</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors" href="https://www.iitr.ac.in/departments/CE/pages/People+Faculty+Saurabh_Vijay.html" target="_blank">
+<i data-lucide="user"></i>
+<span class="hidden sm:inline">IIT Roorkee Profile</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors" href="https://scholar.google.com" target="_blank">
+<i data-lucide="graduation-cap"></i>
+<span class="hidden sm:inline">Google Scholar</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Field Visit Section -->
+<section class="py-16 px-4 bg-gradient-to-br from-blue-50 to-cyan-50" id="field-visits">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">Field Visits</h2>
+        <div class="space-y-6" id="field-visit-list">
+            <div class="field-visit-card bg-white rounded-xl shadow p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-1">Himalayan Glacier Expedition 2024</h3>
+                        <div class="text-sm text-gray-700 mb-2">Location: <span class="font-semibold">Chorabari Glacier, Uttarakhand</span> &bull; Date: <span class="font-semibold">May 2024</span></div>
+                    </div>
+                    <button class="field-visit-toggle-btn mt-2 sm:mt-0 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold flex items-center gap-2" onclick="toggleFieldVisitDetails(this)">
+                        <span>Show Gallery & Details</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+                <div class="field-visit-details mt-4 hidden">
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <img src="assets/images/Saurabh_Vijay.jpg" alt="Field Visit 1" class="rounded-lg shadow h-40 w-full object-cover"/>
+                        <img src="assets/images/Saurabh_Vijay.jpg" alt="Field Visit 2" class="rounded-lg shadow h-40 w-full object-cover"/>
+                        <img src="assets/images/Saurabh_Vijay.jpg" alt="Field Visit 3" class="rounded-lg shadow h-40 w-full object-cover"/>
+                    </div>
+                    <div class="text-gray-700 text-sm">
+                        <p>This field visit focused on in-situ glacier mass balance measurements, installation of time-lapse cameras, and snow/ice sampling for remote sensing validation. The team trekked to the glacier snout and set up monitoring equipment for the melt season.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="field-visit-card bg-white rounded-xl shadow p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-1">Greenland Supraglacial Lake Survey</h3>
+                        <div class="text-sm text-gray-700 mb-2">Location: <span class="font-semibold">Kangerlussuaq, Greenland</span> &bull; Date: <span class="font-semibold">July 2023</span></div>
+                    </div>
+                    <button class="field-visit-toggle-btn mt-2 sm:mt-0 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold flex items-center gap-2" onclick="toggleFieldVisitDetails(this)">
+                        <span>Show Gallery & Details</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+                <div class="field-visit-details mt-4 hidden">
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <img src="assets/images/Saurabh_Vijay.jpg" alt="Greenland Visit 1" class="rounded-lg shadow h-40 w-full object-cover"/>
+                        <img src="assets/images/Saurabh_Vijay.jpg" alt="Greenland Visit 2" class="rounded-lg shadow h-40 w-full object-cover"/>
+                        <img src="assets/images/Saurabh_Vijay.jpg" alt="Greenland Visit 3" class="rounded-lg shadow h-40 w-full object-cover"/>
+                    </div>
+                    <div class="text-gray-700 text-sm">
+                        <p>This expedition involved supraglacial lake mapping, drone surveys, and water sampling to study lake drainage events and their impact on ice flow. The team collaborated with local researchers and collected valuable field data for satellite validation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="max-w-6xl mx-auto"><hr class="border-gray-200 my-12"/></div>
+
+<!-- Projects Section -->
+<section class="max-w-6xl mx-auto px-6 py-14 bg-white rounded-xl shadow" id="projects">
+<h2 class="text-3xl font-bold mb-8">Projects & Grants</h2>
+<div class="space-y-6">
+    <div class="project-card bg-blue-50 rounded-lg shadow p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-1">Supraglacial lakes & ice velocity coupling, Greenland</h3>
+                <div class="text-sm text-gray-700 mb-2">Role: <span class="font-semibold">PI</span> &bull; Funding: <span class="font-semibold">ISRO</span> &bull; Duration: <span class="font-semibold">2022–2025</span></div>
+            </div>
+            <button class="project-toggle-btn mt-2 sm:mt-0 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold flex items-center gap-2" onclick="toggleProjectDetails(this)">
+                <span>Show Details</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+        <div class="project-details mt-4 text-gray-700 text-sm hidden">
+            <p>This project investigates the coupling between supraglacial lakes and ice velocity in Greenland using remote sensing and field data. The aim is to understand how surface meltwater influences glacier dynamics and contributes to mass loss.</p>
+        </div>
+    </div>
+    <div class="project-card bg-blue-50 rounded-lg shadow p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-1">High-resolution Himalayan glacier monitoring</h3>
+                <div class="text-sm text-gray-700 mb-2">Role: <span class="font-semibold">PI</span> &bull; Funding: <span class="font-semibold">IIT Roorkee (FIG)</span> &bull; Duration: <span class="font-semibold">2022–2024</span></div>
+            </div>
+            <button class="project-toggle-btn mt-2 sm:mt-0 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold flex items-center gap-2" onclick="toggleProjectDetails(this)">
+                <span>Show Details</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+        <div class="project-details mt-4 text-gray-700 text-sm hidden">
+            <p>This project focuses on high-resolution monitoring of Himalayan glaciers using satellite imagery and field campaigns, aiming to quantify glacier changes and their response to climate variability.</p>
+        </div>
+    </div>
+    <div class="project-card bg-blue-50 rounded-lg shadow p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-1">Glacier change classification – Uttarakhand</h3>
+                <div class="text-sm text-gray-700 mb-2">Role: <span class="font-semibold">Indian PI</span> &bull; Funding: <span class="font-semibold">Bavarian Indian Center</span> &bull; Duration: <span class="font-semibold">2021</span></div>
+            </div>
+            <button class="project-toggle-btn mt-2 sm:mt-0 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold flex items-center gap-2" onclick="toggleProjectDetails(this)">
+                <span>Show Details</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+        <div class="project-details mt-4 text-gray-700 text-sm hidden">
+            <p>This project classifies glacier changes in Uttarakhand using multi-source satellite data, providing insights into regional glacier health and supporting water resource management.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Students Section -->
+<section class="py-16 px-4" id="students">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
+Research Team
+</h2>
+<!-- PhD Students Cards -->
+<div class="mb-16">
+<h3 class="text-2xl font-bold text-gray-800 mb-8">PhD Students</h3>
+<div class="flex flex-col gap-6" id="phd-cards">
+<!-- PhD student cards will be dynamically inserted -->
+</div>
+</div>
+<!-- Masters Students Cards -->
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-8">Master's Students</h3>
+<div class="flex flex-col gap-6" id="masters-cards">
+<!-- Masters student cards will be dynamically inserted -->
+</div>
+</div>
+</div>
+</section>
+
+<!-- Publications Section -->
+<section class="max-w-6xl mx-auto px-6 py-14" id="publications">
+<h2 class="text-3xl font-bold mb-6">Refereed Publications</h2>
+<div class="flex flex-wrap gap-2 mb-6" id="pub-filters"></div>
+<div class="space-y-4" id="pub-list"></div>
+</section>
+
+<!-- Academic Engagement Section -->
+<section class="py-16 px-4 bg-gradient-to-br from-cyan-50 to-blue-50" id="engagement">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
+Academic Engagement & Outreach
+</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Professional Memberships -->
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20">
+<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+</svg>
+Professional Memberships
+</h3>
+<div class="space-y-4" id="memberships-list">
+<!-- Memberships will be dynamically inserted -->
+</div>
+</div>
+<!-- Editorial & Advisory -->
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path clip-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" fill-rule="evenodd"></path>
+</svg>
+Editorial & Advisory Roles
+</h3>
+<div class="space-y-4" id="committees-list">
+<!-- Committees will be dynamically inserted -->
+</div>
+</div>
+<!-- Outreach Activities -->
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
+</svg>
+Public Outreach
+</h3>
+<div class="space-y-4" id="outreach-list">
+<!-- Outreach activities will be dynamically inserted -->
+</div>
+</div>
+<!-- Conference Presentations -->
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-2">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" fill-rule="evenodd"></path>
+</svg>
+Recent Conferences
+</h3>
+<div class="space-y-4" id="conferences-list">
+<!-- Conferences will be dynamically inserted -->
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-4">
+<div class="max-w-6xl mx-auto text-center">
+<p class="mb-4">© 2026 Dr. Saurabh Vijay | Department of Civil Engineering, IIT Roorkee</p>
+<div class="text-4xl cursor-pointer hover:scale-125 transition-transform inline-block" id="easter-egg" title="Double-click me!">
+🏔️
+</div>
+</div>
+</footer>
+
+<script>
+// DATA DEFINITIONS
+window.publications = [
+  {year: 2019, title: 'Resolving Seasonal Ice Velocity of 45 Greenlandic Glaciers with very high temporal details', authors: 'Vijay, S., Khan, S.A., Kusk, A., Solgaard, A.M., Moon, T., Bjørk, A.A.', journal: 'Geophysical Research Letters', doi: '10.1029/2018GL081503'},
+  {year: 2021, title: 'Greenland ice-sheet wide glacier classification based on two distinct seasonal ice velocity behaviours', authors: 'Vijay, S., King, M.D., Howat, I.M., Solgaard, A.M., Khan, S.A., Noël, B.', journal: 'Journal of Glaciology', doi: '10.1017/jog.2021.89'},
+  {year: 2016, title: 'Elevation change rates of glaciers in the Lahaul-Spiti (Western Himalaya, India)', authors: 'Vijay, S., Braun, M.', journal: 'Remote Sensing', doi: '10.3390/rs8120635'},
+  {year: 2018, title: 'Early 21st century spatially detailed elevation changes of Jammu and Kashmir glaciers (Karakoram-Himalaya)', authors: 'Vijay, S., Braun, M.', journal: 'Global and Planetary Change', doi: '10.1016/j.gloplacha.2018.03.014'},
+  {year: 2025, title: 'Quantifying short-term backwasting rates of a supraglacial ice cliff at Machoi Glacier in the Indian Himalaya', authors: 'Singh, P., Vijay, S., Banerjee, A., Sarangi, C., Rashid, I., Zargar, S.A.', journal: 'Journal of Glaciology', doi: '10.1017/jog.2024.103'},
+  {year: 2025, title: 'Potential of ICESat-2 and multispectral satellite imagery for estimating the depth of shallow glacial lakes in the Himalaya', authors: 'Verma, S.K., Vijay, S.', journal: 'Remote Sensing Applications: Society and Environment', doi: '10.1016/j.rsase.2025.101577'},
+  {year: 2022, title: 'Greenland Mass Trends from Airborne and Satellite Altimetry During 2011–2020', authors: 'Khan, S.A. et al.', journal: 'Journal of Geophysical Research: Earth Surface', doi: '10.1029/2021JF006505'},
+  {year: 2018, title: 'Automatic delineation of debris-covered glaciers using InSAR coherence', authors: 'Lippl, S., Vijay, S., Braun, M.', journal: 'Journal of Glaciology', doi: '10.1017/jog.2018.70'},
+  {year: 2021, title: 'Surges of Harald Moltke Bræ, north-western Greenland', authors: 'Müller, L. et al.', journal: 'The Cryosphere', doi: '10.5194/tc-15-3355-2021'},
+  {year: 2023, title: 'A Scaling Relation for Cryoconite Holes', authors: 'Banerjee, A. et al.', journal: 'Geophysical Research Letters', doi: '10.1029/2023GL104942'},
+  {year: 2025, title: 'Inventorying rock glaciers in the Western Himalaya, India', authors: 'Bhat, I.A. et al.', journal: 'Geomorphology', doi: '10.1016/j.geomorph.2024.109514'},
+  {year: 2024, title: 'Assessing potential risk of glacier avalanches to hydropower infrastructure', authors: 'Laha, S. et al.', journal: 'Natural Hazards', doi: '10.1007/s11069-024-06614-4'},
+  {year: 2020, title: '60 years of glacier elevation and mass changes in Maipo River Basin, central Andes of Chile', authors: 'Farias-Barahona, D. et al.', journal: 'Remote Sensing', doi: '10.3390/rs12101658'},
+  {year: 2019, title: 'Ice dynamics of Union Glacier from SAR offset tracking', authors: 'Gomez, R. et al.', journal: 'Global and Planetary Change', doi: '10.1016/j.gloplacha.2018.12.012'},
+  {year: 2015, title: 'Four decades of glacier variations at Muztag Ata (eastern Pamir)', authors: 'Holzer, N. et al.', journal: 'The Cryosphere', doi: '10.5194/tc-9-2071-2015'},
+  {year: 2017, title: 'Seasonal and interannual variability of Columbia Glacier, Alaska (2011–2016)', authors: 'Vijay, S., Braun, M.', journal: 'Remote Sensing', doi: '10.3390/rs9060635'}
+];
+// PROJECTS COLLAPSIBLE FUNCTIONALITY
+function toggleProjectDetails(btn) {
+    const details = btn.parentElement.parentElement.querySelector('.project-details');
+    const icon = btn.querySelector('i');
+    const span = btn.querySelector('span');
+    const isOpen = !details.classList.contains('hidden');
+    document.querySelectorAll('.project-details').forEach(d => d.classList.add('hidden'));
+    document.querySelectorAll('.project-toggle-btn').forEach(b => {
+        b.querySelector('span').textContent = 'Show Details';
+        b.querySelector('i').setAttribute('data-lucide', 'chevron-down');
+    });
+    if (!isOpen) {
+        details.classList.remove('hidden');
+        span.textContent = 'Hide Details';
+        icon.setAttribute('data-lucide', 'chevron-up');
+    }
+    lucide.createIcons();
+}
+
+window.phdStudents = [
+    {
+        name: 'Prankur Sharma',
+        image: 'assets/images/Prankur_Sharma.jpg',
+        topic: 'Snow Water Equivalent Estimation Using Remote Sensing Techniques And Field Observation',
+        since: '2023',
+        description: 'Our research in the Indian Himalayas focuses on understanding snowpack characteristics by combining high-resolution satellite imagery with systematic field observations. We study key parameters such as snow depth, density, and snow water equivalent, critical for water resource management and disaster assessment. We have deployed a network of time-lapse camera systems to complement satellite observations at diverse topographic locations, ensuring continuous snow depth monitoring. These field-based measurements provide valuable ground truth data, enabling the calibration and validation of our satellite-derived snow depth products.',
+        projects: [
+            {
+                title: 'Himalayan Snow Field Campaign',
+                details: 'By integrating remote sensing and in situ monitoring, we strive to enhance the accuracy and reliability of snow parameter estimation in this region.',
+                images: [
+                   // 'assets/images/Saurabh_Vijay.jpg',
+                    //'assets/images/Saurabh_Vijay.jpg'
+                ]
+            }
+        ]
+    },
+    {
+        name: 'Gopika Das K',
+        image: 'assets/images/Gopika_das_k.jpg',
+        topic: 'Investigating the interlinked seasonal evolution of supraglacial lakes and ice velocity changes on glaciers in Greenland using both optical and radar remote sensing satellite data.',
+        since: '2023',
+        description: 'This research investigates the evolution of supraglacial lakes over the Greenland Ice Sheet, focusing on their seasonal dynamics in terms of number, area, and volume over the melt season. Given their highly dynamic nature, we analyze patterns of lake filling and drainage and examine how these processes vary with surface temperature, elevation, and terrain slope. Based on the estimated area and volume, supraglacial lakes are classified into rapidly draining and non-rapidly draining types. By identifying lakes that rapidly drain, we investigate the terrain factors that control the occurrence of these events, as observed consistently across multiple melt seasons.',
+        projects: [
+            {
+                title: 'Greenland Glacier Dynamics',
+                details: 'Furthermore, we intend to examine the influence of such rapid drainage events on glacier dynamics by integrating them with surface ice velocity fields derived from Sentinel-1 radar data.',
+                images: [
+                    //'assets/images/Saurabh_Vijay.jpg',
+                    //'assets/images/Saurabh_Vijay.jpg'
+                ]
+            }
+        ]
+    },
+    {
+        name: 'Sarvesh Kumar Verma',
+        image: 'assets/images/Sarvesh_kumar_verma.jpg',
+        topic: 'To improve the observation of small glaciers using satellite remote sensing techniques.',
+        since: '2021',
+        description: 'This research focuses on mapping glaciers, calculating their decadal retreat rates, and showing the relationship between frontal retreat and mass rate changes in the Himalaya using Deep Learning techniques and satellite remote sensing. This research also determines the glacial lake depth estimates using ICESat-2 Laser satellites and multi-spectral remote sensing images.',
+        projects: [
+            {
+                title: 'CB Basin Temporal Analysis',
+                details: 'Temporal glacier outlines using UNet++ model for years 2010, 2019, and 2024.',
+                images: [
+                    //'assets/images/Saurabh_Vijay.jpg'
+                ]
+            }
+        ]
+    },
+    {
+        name: 'Deepak Verma',
+        image: 'assets/images/Deepak%20Verma.jpg',
+        topic: 'Assessment Of Seasonal Deformation And Failure Risk In Dams Using Satellite-Based Time Series SAR Interferometry.',
+        since: '2022',
+        description: 'My research focuses on dam monitoring using InSAR-based time series analysis, understanding the seasonal dam deformation, and identifying the potential failure signals in dams. Evaluating dam deformation seasonality is crucial, as it reflects the dam\'s operational condition and is influenced by seasonal changes in reservoir water level and rainfall, making it key for effective safety monitoring and management. So far, we have studied some of the dams in India (i.e., Tehri, Pong, and Nagrajuna Sagar), as well as some of the dams in the USA, to examine the seasonality of deformation and potential failure risk using the InSAR Sentinel-1 C-band data.',
+        projects: []
+    },
+    {
+        name: 'Sapna Azad',
+        image: 'assets/images/Sapna_Azad.jpg',
+        topic: 'Integrating remote sensing and modeling for assessing ice dynamics in East Antarctica.',
+        since: '2023',
+        description: 'The research focuses on how Amery Ice Shelf Basin in East Antarctica changes dynamically using the Satellite Data and through Modelling. First, we examine the long-term mass balance of the ice sheet using the input-output method. Then, we use the DDInSAR technique to map the position of the grounding line of the ice shelf. After that we use models to investigate how subglacial hydrology affects the stability of the ice shelf and the position of the grounding line.',
+        projects: []
+    },
+    {
+        name: 'Pawan Singh',
+        image: 'assets/images/Pawan.png',
+        topic: 'High Resolution Monitoring of the Himalayan glacier using terrestrial observations and methods',
+        since: 'July 2021',
+        description: 'Doctoral research in Geomatics Engineering from the Indian Institute of Technology Roorkee.',
+        projects: []
+    },
+    {
+        name: 'Yamini Agrawal',
+        image: 'assets/images/Yamini_Agrawal.jpg',
+        topic: 'MULTI-TEMPORAL ANALYSIS OF CREVASSE EVOLUTION, CALVING PROCESSES AND ICE DISCHARGE PATTERNS IN LAKE-TERMINATING GLACIERS OF HIMALAYAS',
+        since: '2024',
+        description: 'My research focuses on quantifying the complete life cycle of crevasses (nucleation, propagation, and closure) in lake-terminating glaciers using integrated multi-temporal remote sensing and numerical modelling. It also investigates the mechanistic relationships between crevasse characteristics and calving processes (frequency, magnitude, and seasonal variability), and examines the role of crevasses and calving events in controlling ice discharge patterns to quantify total ice discharge.',
+        projects: []
+    },
+    {
+        name: 'Ravindra Kumar',
+        image: 'assets/images/Ravindra_Kumar.jpg',
+        topic: 'Improving Observations of Glacial Lakes in High Mountain Asia using Multi-Source Remote Sensing Data',
+        since: 'July 2021',
+        description: 'This research focuses on developing an automated framework to map glacial lakes in High Mountain Asia (HMA), creating an updated inventory, and detecting changes across different regions of HMA. It also aims to improve the accuracy of volume estimation for glacial lakes, evaluate the accuracy of area–volume scaling models, and assess their suitability. Additionally, this work involves identifying previously undetected Glacial Lake Outburst Flood (GLOF) events across HMA to more accurately update their occurrence frequency, ultimately contributing to GLOF risk mitigation.',
+        projects: []
+    },
+    {
+        name: 'Hempushpa Sahu',
+        image: 'assets/images/Hempushpa_sahu.jpg',
+        topic: 'Multi-source remote sensing data for drought monitoring and assessment.',
+        since: '2021',
+        description: 'In her Ph.D., she is trying to understand drought onset and termination using the different drought indices mostly used from the historical period from 1990 to 2021 for Bundelkhand, Uttar Pradesh, a drought-prone region of central India. Focusing on agricultural drought, a crop yield prediction is done using a random forest machine learning model.',
+        projects: [
+            {
+                title: 'International Collaboration',
+                details: 'Guest researcher at IWW, RWTH Aachen University, Germany, for 6 months through AROP scholarship from July 2024 to December 2024.',
+                images: [
+                   // 'assets/images/Saurabh_Vijay.jpg'
+                ]
+            }
+        ]
+    }
+];
+
+window.mastersStudents = [
+    {
+        name: 'Aditya Rajsinh Thakur',
+        topic: 'Topic',
+        since: '2025',
+        image: 'assets/images/Aditya.jpg',
+        description: ' description',
+        projects: [
+            //{
+               // title: 'Debris Mapping Algorithm',
+                //details: 'Automated detection of debris cover using multi-temporal SAR coherence.',
+                //images: [
+                  //  'assets/images/Saurabh_Vijay.jpg'
+                //]
+            //}>>
+        ]
+    },
+    {
+        name: 'Greeffin Raju Fule',
+        topic: 'Topic',
+        since: '2025',
+        image: 'assets/images/Greeffin_Raju_Fule.png',
+        description: ' description',
+        projects: [
+            //{
+               // title: 'Debris Mapping Algorithm',
+                //details: 'Automated detection of debris cover using multi-temporal SAR coherence.',
+                //images: [
+                  //  'assets/images/Saurabh_Vijay.jpg'
+                //]
+            //}>>
+        ]
+    },
+     {
+        name: 'Kuna Sai Tharun',
+        topic: 'Topic',
+        since: '2025',
+        image: 'assets/images/',
+        description: ' description',
+        projects: [
+            //{
+               // title: 'Debris Mapping Algorithm',
+                //details: 'Automated detection of debris cover using multi-temporal SAR coherence.',
+                //images: [
+                  //  'assets/images/Saurabh_Vijay.jpg'
+                //]
+            //}>>
+        ]
+    },
+     {
+        name: 'Ujjwal Sharma',
+        topic: 'AI and SAR Interferometry ',
+        since: '2026',
+        image: 'assets/images/Ujjwal.jpeg',
+        description: ' description',
+        projects: [
+            //{
+               // title: 'Debris Mapping Algorithm',
+                //details: 'Automated detection of debris cover using multi-temporal SAR coherence.',
+                //images: [
+                  //  'assets/images/Saurabh_Vijay.jpg'
+                //]
+            //}>>
+        ]
+    },
+     {
+        name: 'Anushri V Yeole',
+        topic: 'Topic',
+        since: '2026',
+        image: 'assets/images/Anushri.jpg',
+        description: ' description',
+        projects: [
+            //{
+               // title: 'Debris Mapping Algorithm',
+                //details: 'Automated detection of debris cover using multi-temporal SAR coherence.',
+                //images: [
+                  //  'assets/images/Saurabh_Vijay.jpg'
+                //]
+            //}>>
+        ]
+    },
+];
+
+window.engagements = {
+  memberships: [
+    {
+      organization: 'International Glaciological Society',
+      role: 'Council Member',
+      period: 'Since 2023'
+    },
+    {
+      organization: 'International Glaciological Society',
+      role: 'Member',
+      period: 'Ongoing'
+    },
+    {
+      organization: 'IEEE',
+      role: 'Member',
+      period: 'Ongoing'
+    },
+    {
+      organization: 'IGARSS',
+      role: 'Member',
+      period: 'Ongoing'
+    }
+  ],
+  committees: [
+    {
+      name: 'NASA ROSES Research Calls',
+      role: 'Review Panel Member',
+      period: '2023-2024'
+    },
+    {
+      name: 'India\'s Scientific Expedition to Antarctica (NCPOR)',
+      role: 'Proposal Reviewer',
+      period: '2022-Present'
+    },
+    {
+      name: 'Journal of Glaciology',
+      role: 'Reviewer',
+      period: 'Ongoing'
+    },
+    {
+      name: 'Remote Sensing of Environment',
+      role: 'Reviewer',
+      period: 'Ongoing'
+    },
+    {
+      name: 'The Cryosphere',
+      role: 'Reviewer',
+      period: 'Ongoing'
+    }
+  ],
+  outreach: [
+    {
+      activity: 'Public Lecture Series on Climate Change',
+      description: 'Regular talks on glacier dynamics and climate change impacts for general audiences.'
+    },
+    {
+      activity: 'School Outreach Programs',
+      description: 'Interactive sessions with school students about Himalayan glaciers and remote sensing.'
+    },
+    {
+      activity: 'Media Interviews',
+      description: 'Expert commentary on glacier and climate science for national and international media.'
+    }
+  ],
+  conferences: [
+    {
+      event: 'IGS International Symposium',
+      location: 'Reykjavik, Iceland',
+      date: 'August 2024'
+    },
+    {
+      event: 'AGU Fall Meeting',
+      location: 'San Francisco, USA',
+      date: 'December 2023'
+    },
+    {
+      event: 'Asian Conference on Remote Sensing',
+      location: 'New Delhi, India',
+      date: 'November 2023'
+    }
+  ]
+};
+
+// STUDENT CARDS FUNCTIONALITY
+function renderStudentCards(students, containerId, isPhd = true) {
+    const container = document.getElementById(containerId);
+    if (!students || students.length === 0) {
+        container.innerHTML = '<p class="text-gray-500 col-span-full text-center">No students data available.</p>';
+        return;
+    }
+    
+    container.innerHTML = students.map((student, index) => {
+        const toggleClass = isPhd ? '' : 'masters';
+        return `
+            <div class="student-card student-card-horizontal">
+                <div class="student-card-header-horizontal">
+                    <img 
+                        src="${student.image}"
+                        alt="${student.name}"
+                        loading="lazy"
+                        class="student-card-image-horizontal"
+                    />
+                    <div class="student-card-info-horizontal">
+                        <div class="student-card-name">${student.name}</div>
+                        <div class="text-xs font-semibold mb-1 ${isPhd ? 'text-blue-600' : 'text-cyan-600'}">${isPhd ? 'PhD' : "Master's"} Student (${student.since})</div>
+                        <div class="student-card-topic">${student.topic}</div>
+                    </div>
+                </div>
+                <button class="student-card-toggle ${toggleClass}" onclick="toggleStudentCard(this)">
+                    <span>Show Details</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="student-card-details">
+                    <div class="student-card-content">
+                        <p class="mb-4">${student.description}</p>
+                        ${renderProjects(student.projects)}
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    lucide.createIcons();
+}
+
+function toggleStudentCard(button) {
+    const detailsDiv = button.nextElementSibling;
+    const isExpanded = detailsDiv.classList.contains('expanded');
+    const icon = button.querySelector('i');
+    const span = button.querySelector('span');
+    
+    detailsDiv.classList.toggle('expanded');
+    span.textContent = isExpanded ? 'Show Details' : 'Hide Details';
+    
+    // Update icon
+    icon.setAttribute('data-lucide', isExpanded ? 'chevron-down' : 'chevron-up');
+    lucide.createIcons();
+}
+
+function renderProjects(projects) {
+    if (!projects || projects.length === 0) return '';
+    
+    return projects.map(project => `
+        <div class="border-t pt-4 mt-4">
+            <h5 class="font-bold text-gray-900 mb-2">${project.title}</h5>
+            <p class="text-gray-700 mb-3">${project.details}</p>
+            ${project.images && project.images.length > 0 ? `
+            <div class="image-gallery">
+                ${project.images.map(img => `
+                    <img src="${img}" alt="${project.title}" loading="lazy" class="w-full h-40 object-cover rounded-lg shadow-md">
+                `).join('')}
+            </div>
+            ` : ''}
+        </div>
+    `).join('');
+}
+
+// PUBLICATIONS RENDERING
+function renderPublications() {
+    const container = document.getElementById('pub-list');
+    const filters = document.getElementById('pub-filters');
+    
+    if (!container || !window.publications) {
+        console.error('Publications container or data not found');
+        return;
+    }
+
+    const years = ['all', ...new Set(publications.map(p => p.year))].sort((a,b) => {
+        if (a === 'all') return -1;
+        if (b === 'all') return 1;
+        return b - a;
+    });
+
+    filters.innerHTML = years.map(year => `
+        <button class="year-filter-btn ${year === 'all' ? 'active' : ''}" data-year="${year}">
+            ${year === 'all' ? 'All Years' : year}
+        </button>
+    `).join('');
+
+    filters.querySelectorAll('.year-filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const year = this.getAttribute('data-year');
+            filters.querySelectorAll('.year-filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            displayPublications(year);
+        });
+    });
+
+    displayPublications('all');
+
+    function displayPublications(year) {
+        const filtered = year === 'all' 
+            ? publications 
+            : publications.filter(p => String(p.year) === String(year));
+        
+        container.innerHTML = filtered.map(p => `
+            <div class="publication-card bg-white rounded-lg shadow p-6">
+                <h4 class="font-bold text-gray-900 mb-2">${p.title}</h4>
+                <p class="text-sm text-gray-600 mb-2">${p.authors}</p>
+                <p class="text-sm text-gray-500 mb-3">
+                    <em>${p.journal}</em> (${p.year})
+                </p>
+                ${p.doi ? `
+                    <a href="https://doi.org/${p.doi}" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="text-blue-600 hover:text-blue-700 text-sm font-semibold inline-flex items-center gap-1">
+                        View Publication
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                ` : ''}
+            </div>
+        `).join('');
+        
+        lucide.createIcons();
+    }
+}
+
+// ENGAGEMENT RENDERING
+function renderEngagements() {
+    if (!window.engagements) {
+        console.error('Engagements data not found');
+        return;
+    }
+
+    const memberships = document.getElementById('memberships-list');
+    const committees = document.getElementById('committees-list');
+    const outreach = document.getElementById('outreach-list');
+    const conferences = document.getElementById('conferences-list');
+
+    if (memberships && engagements.memberships) {
+        memberships.innerHTML = engagements.memberships.map(m => `
+            <div class="engagement-item membership">
+                <p class="font-semibold text-gray-900">${m.organization}</p>
+                <p class="text-sm text-gray-600">${m.role}${m.period ? ' • ' + m.period : ''}</p>
+            </div>
+        `).join('');
+    }
+
+    if (committees && engagements.committees) {
+        committees.innerHTML = engagements.committees.map(c => `
+            <div class="engagement-item committee">
+                <p class="font-semibold text-gray-900">${c.name}</p>
+                <p class="text-sm text-gray-600">${c.role}${c.period ? ' • ' + c.period : ''}</p>
+            </div>
+        `).join('');
+    }
+
+    if (outreach && engagements.outreach) {
+        outreach.innerHTML = engagements.outreach.map(o => `
+            <div class="engagement-item outreach">
+                <p class="font-semibold text-gray-900">${o.activity}</p>
+                <p class="text-sm text-gray-600">${o.description}</p>
+            </div>
+        `).join('');
+    }
+
+    if (conferences && engagements.conferences) {
+        conferences.innerHTML = engagements.conferences.map(c => `
+            <div class="engagement-item conference">
+                <p class="font-semibold text-gray-900">${c.event}</p>
+                <p class="text-sm text-gray-600">${c.location} • ${c.date}</p>
+            </div>
+        `).join('');
+    }
+}
+
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// STICKY INDEX NAVIGATION
+function initStickyNav() {
+    const stickyNav = document.getElementById('sticky-nav');
+    const navItems = document.querySelectorAll('.sticky-nav-item');
+    const heroBanner = document.querySelector('.hero-banner');
+    
+    if (!stickyNav || !heroBanner) return;
+    
+    // Handle sticky positioning
+    function updateStickyNav() {
+        const bannerBottom = heroBanner.getBoundingClientRect().bottom;
+        
+        if (bannerBottom <= 0) {
+            stickyNav.classList.add('sticky');
+        } else {
+            stickyNav.classList.remove('sticky');
+        }
+        
+        // Update active section based on scroll position
+        const sections = ['home', 'projects', 'students', 'publications', 'engagement'];
+        const scrollPosition = window.scrollY + 100;
+        
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = document.getElementById(sections[i]);
+            if (section && section.offsetTop <= scrollPosition) {
+                navItems.forEach(item => {
+                    if (item.getAttribute('data-section') === sections[i]) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+                break;
+            }
+        }
+    }
+    
+    // Handle nav item clicks
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const section = this.getAttribute('data-section');
+            const element = document.getElementById(section);
+            
+            if (element) {
+                const offset = stickyNav.classList.contains('sticky') ? 60 : 0;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    window.addEventListener('scroll', debounce(updateStickyNav, 10));
+    updateStickyNav(); // Initial call
+}
+
+// INDEX NAVIGATION
+function initIndexNav() {
+    const indexNavLinks = document.querySelectorAll('.index-nav-link');
+    
+    // Handle click navigation
+    indexNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const section = this.getAttribute('data-section');
+            scrollToSection(section);
+            updateIndexNav(section);
+        });
+    });
+    
+    // Handle scroll to update active link
+    window.addEventListener('scroll', debounce(updateIndexNavOnScroll, 100));
+}
+
+function scrollToSection(section) {
+    const element = document.getElementById(section);
+    if (element) {
+        const indexNav = document.getElementById('index-nav');
+        const navHeight = indexNav ? indexNav.offsetHeight : 0;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight - 20;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+function updateIndexNav(section) {
+    document.querySelectorAll('.index-nav-link').forEach(link => {
+        if (link.getAttribute('data-section') === section) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+function updateIndexNavOnScroll() {
+    const sections = ['home', 'projects', 'students', 'publications', 'engagement'];
+    const scrollPosition = window.scrollY + 100;
+    
+    for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+            updateIndexNav(sections[i]);
+            break;
+        }
+    }
+}
+
+// PARALLAX HERO BANNER
+function initParallaxBanner() {
+    const heroBanner = document.querySelector('.hero-banner');
+    if (!heroBanner) return;
+    
+    const maxPadding = 8;
+    const minPadding = 0.5;
+    const maxMinHeight = 80;
+    const minMinHeight = 35;
+    
+    function updateBannerParallax() {
+        const scrollPosition = window.scrollY;
+        const heroBannerHeight = heroBanner.offsetHeight;
+        
+        // Calculate progress: 0 at top, 1 when banner is scrolled out of view
+        const progress = Math.min(scrollPosition / (heroBannerHeight * 0.7), 1);
+        
+        // Reverse progress for expansion effect (1 at top, 0 when scrolled down)
+        const expandProgress = 1 - progress;
+        
+        // Calculate dynamic padding and height
+        const padding = minPadding + (maxPadding - minPadding) * expandProgress;
+        const minHeight = minMinHeight + (maxMinHeight - minMinHeight) * expandProgress;
+        
+        heroBanner.style.paddingTop = padding + 'rem';
+        heroBanner.style.paddingBottom = padding + 'rem';
+        heroBanner.style.minHeight = minHeight + 'vh';
+    }
+    
+    window.addEventListener('scroll', debounce(updateBannerParallax, 10));
+    updateBannerParallax(); // Initial call
+}
+
+// EASTER EGG
+function initEasterEgg() {
+    const easterEgg = document.getElementById('easter-egg');
+    if (easterEgg) {
+        easterEgg.addEventListener('dblclick', function() {
+            alert('🏔️ Keep exploring glaciers! 🏔️');
+        });
+    }
+}
+
+// INITIALIZE EVERYTHING
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        renderStudentCards(phdStudents, 'phd-cards', true);
+        renderStudentCards(mastersStudents, 'masters-cards', false);
+        renderPublications();
+        renderEngagements();
+        initIndexNav();
+        initParallaxBanner();
+        initEasterEgg();
+        
+        lucide.createIcons();
+    } catch (e) {
+        console.error('Error initializing site:', e);
+    }
+});
+</script>
+
+<script>
+lucide.createIcons();
+</script>
+</body>
+</html>
